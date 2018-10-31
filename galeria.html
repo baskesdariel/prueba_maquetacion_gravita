@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/> 
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="stylesheet" type="text/css" href="fonts/style.css"/>
+		<script type="text/javascript" src="validacion.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="menu.js"></script>
+		<title>Galería</title>
+	</head>
+
+<body>
+<div class="dashboardPages">
+
+<div id="mostrar-nav" class="icon-list">
+</div>
+
+	<nav>
+		<div class="topSection">
+			<ul class="menuTop">
+				<li><span class="tituloNasa">NASA</span><div class="arrow1"></div><span class="icon-files-1"></span><a href="#">NASA Graphics Standards</a></li>
+				<li><span class="icon-pictures2"></span><a title="Acceder a ficheros y documentos" href="#">Ficheros y documentos</a></li>
+				<li><span class="icon-pictures2"></span><a title="Acceder a galería de fotos" href="#">Galería de fotos</a></li>
+				<li><span class="icon-chart3"></span><a title="Acceder a estadísticas e indicadores"href="#">Estadísticas e indicadores</a></li>
+				<li><span class="icon-brush"></span><a title="Acceder a design on demand"href="#">Design on demand</a></li>
+				<li class="border alone"><a title="Acceder a tus colaboradores" class="colaboradores" href="#">Tus colaboradores 3</a><span class="icon-plus1"></span></li>
+				<li class="alone"><a title="Espacio restante" href="#">Espacio restante 560.08 MB</a><div class="progress progress-red"><span style="width: 7%;"></span></div></li>
+				<li class="border"><span class="icon-plus1"></span><a title="Añadir nueva marca" href="#">Añadir nueva marca</a></li>
+				<li class="border"><span class="icon-chart3"></span><a title="Acceder a informes globales" href="#openModal">Informes globales</a>
+					<div id="openModal" class="modal">
+  					<div class="modal-contenido">
+    					<div class="imgDialog">
+    						<img src="imagenes/dialog.png" title="Imagen Mintta" alt="" />
+    					</div>
+    					<div class="contenidoDialog">
+    						<h2>Informes globales</h2>
+    						<p>En esta versión de mintta solo hay una marca, no hay disponibles comparativas, métricas e indicadores globales.</p>
+    						<p class="bold">¿Te gustaría gestionar alguna marca más?</p>
+    						<p class="bold">Contacta con nosotros y nos cuentas qué necesitas</p>
+    						<button class="contactar" type="submit" value="contactar">contactar</button>
+    						<a title="Cerrar ventana modal" class="close" href="#">Cerrar</a>
+    					</div>
+  					</div>
+  					</div>
+  				</li>
+			</ul>
+		</div>
+		<div class="downSection">
+			<ul class="menuBottom">
+				<li><img class="perfil" src="imagenes/mujer.jpg" title="Imagen de perfil" alt="" /><span href="#">Grávita Transformación S.L</span><div class="arrow"></div></li>
+				<li><span class="icon-profile"></span><a title="Acceder a mi perfil" href="#">Mi perfil</a></li>
+				<li><span class="icon-graduate"></span><a title="Acceder a formación" href="#">Formación</a><span class="spanNuevos">Nuevo</span></li>
+				<li><span class="icon-medal1"></span><a title="Acceder a logos y recompensas" href="#">Logos y recompensas</a><span class="spanNuevos">Próximamente</span></li>
+				<li><span class="icon-envelope"></span><a title="Acceder a mensajes" href="#">Mensajes</a></li>
+				<li><span class="icon-alarm"></span><a title="Acceder a notificaciones" href="#">Notificaciones</a></li>
+				<li><span class="icon-cancel2"></span></span><a title="salir" href="login.html">Salir</a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+
+	<div id="galeria">
+		<ol class="breadcrumb">
+  			<li><a title="Acceder a nasa" href="dashboard.html">NASA</a></li><span class="breadcrumbColor">></span>
+  			<li><a title="Acceder a galería de fotos" href="#">Galería de fotos</a></li>
+		</ol>
+		<div class="galeriaMenu">
+			<h1>Galería de fotos</h1>
+			<span class="bold">Secciones</span>
+				<ul>
+				<li><a title="Acceder a logos" href="#">Logos (6)</a></li>
+				<li><a title="Acceder a fotografía" href="#">Fotografía (0)</a></li>
+				<li><a title="Acceder a tipografía" href="#">Tipografía (0)</a></li>
+				<li><a title="Acceder a ilustración" href="#">Ilustración (0)</a></li>
+			</ul>
+			<span class="bold">Búsqueda rápida</span>
+				<form id="form" class="busqueda" name="formulario">
+					<label class="hiddenStructure" for="busqueda">Búsqueda:</label>  
+					<input id="busqueda" type="text" name="busqueda" placeholder="¿Qué deseas buscar?"></input>
+					<button class="buscar" type="submit" value="Acceder"><span class="icon-magnifier"></span></button>
+
+					
+				</form> 
+			<span class="bold">Etiquetas</span>
+				<form id="form" name="formulario">
+					<label class="hiddenStructure" for="etiquetas">Búsqueda:</label>  
+					<select class="etiquetas" name="etiquetas">
+						<option>Elige etiquetas...</option>
+						<option>Fútbol</option>
+      					<option>Críquet</option>
+      					<option>Básquetbol</option>
+      					<option>Hockey</option>
+      					<option>Tenis</option>
+					</select>
+				</form> 
+			<span class="bold">Última actualización</span>
+				<form id="form" name="formulario">
+					<label class="hiddenStructure" for="fecha">Desde:</label>  
+					<span class="icon-calendar"></span>
+					<input type="date" name="fecha" placeholder="Desde"></input>
+					<label class="hiddenStructure" for="fecha">Hasta:</label> 
+					<span class="icon-calendar"></span> 
+					<input type="date" name="fecha" placeholder="Hasta"></input>
+				</form> 
+		</div>
+		<div class="GaleriaImagenes">
+			<div class="bold">Mostrando 6</div>
+			<ul class="imagenes">
+				<li><a title="Ver imagen"><img src="imagenes/hojasArbol.jpg" title="Hojas" alt="" /></a><span>Sin nombre</span></li>
+				<li><a title="Ver imagen"><img src="imagenes/flor.jpg" title="Flor" alt="" /></a><span>Sin nombre</span></li>
+				<li><a title="Ver imagen"><img src="imagenes/tecnologia.jpg" title="tecnología" alt="" /></a><span>Sin nombre</span></li>
+				<li><a title="Ver imagen"><img src="imagenes/estetica.jpg" title="estética" alt="" /></a><span>Sin nombre</span></li>
+				<li><a title="Ver imagen"><img src="imagenes/girasoles.jpg" title="girasoles" alt="" /></a><span>Sin nombre</span></li>
+				<li><a title="Ver imagen"><img src="imagenes/animales.jpg" title="animales" alt="" /></a><span>Sin nombre</span></li>
+			</ul>
+		</div>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
