@@ -1,92 +1,103 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="es">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/> 
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<link rel="stylesheet" type="text/css" href="fonts/style.css"/>
-		<script type="text/javascript" src="validacion.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script type="text/javascript" src="menu.js"></script>
+		<script src="validacion.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="desplegar.js"></script>
 		<title>dashboard</title>
 	</head>
 
 <body>
-<div class="dashboardPages">
-
-<div id="mostrar-nav" class="icon-list">
-</div>
-	<nav>
-		<div class="topSection">
-			<ul class="menuTop">
-				<li><span class="tituloNasa">NASA</span><div class="arrow1"></div><span class="icon-files-1"></span><a href="#">NASA Graphics Standards</a></li>
-				<li><span class="icon-pictures2"></span><a title="Acceder a ficheros y documentos" href="#">Ficheros y documentos</a></li>
-				<li><span class="icon-pictures2"></span><a title="Acceder a la galería de fotos"href="galeria.html">Galería de fotos</a></li>
-				<li><span class="icon-chart3"></span><a title="Acceder a estadísticas e indicadores"href="#">Estadísticas e indicadores</a></li>
-				<li><span class="icon-brush"></span><a title="Acceder a Design on demand" href="#">Design on demand</a></li>
-				<li class="border alone"><a class="colaboradores" title="Acceder a colaboradores" href="#">Tus colaboradores 3</a><span class="icon-plus1"></span></li>
-				<li class="alone"><a title="Espacio restante" href="#">Espacio restante 560.08 MB</a><div class="progress progress-red"><span style="width: 7%;"></span></div></li>
-				<li class="border"><span class="icon-plus1"></span><a title="Añadir nueva marca" href="#">Añadir nueva marca</a></li>
-				<li class="border"><span class="icon-chart3"></span><a title="Acceder a informes globales" href="#openModal">Informes globales</a>
-					<div id="openModal" class="modal">
-  					<div class="modal-contenido">
-    					<div class="imgDialog">
-    						<img src="imagenes/dialog.png" title="Mintta" alt="" />
-    					</div>
-    					<div class="contenidoDialog">
-    						<h2>Informes globales</h2>
-    						<p>En esta versión de mintta solo hay una marca, no hay disponibles comparativas, métricas e indicadores globales.</p>
-    						<p class="bold">¿Te gustaría gestionar alguna marca más?</p>
-    						<p class="bold">Contacta con nosotros y nos cuentas qué necesitas</p>
-    						<button class="contactar" type="submit" value="contactar">contactar</button>
-    						<a title="Cerrar ventana modal" class="close" href="#">Cerrar</a>
-    					</div>
-  					</div>
-  					</div>
-  				</li>
-			</ul>
-		</div>
-		<div class="marginTop">
-			<ul class="menuBottom">
-				<li><img class="perfil" src="imagenes/mujer.jpg" title="Imagen de perfil" alt="Imagen de perfil" /><span href="#">Grávita Transformación S.L</span><div class="arrow"></div></li>
-				<li><span class="icon-profile"></span><a title="Acceder a mi perfil" href="#">Mi perfil</a></li>
-				<li><span class="icon-graduate"></span><a title="Acceder a formación" href="#">Formación</a><span class="spanNuevos">Nuevo</span></li>
-				<li><span class="icon-medal1"></span><a title="Acceder a logos y recompensas" href="#">Logos y recompensas</a><span class="spanNuevos">Próximamente</span></li>
-				<li><span class="icon-envelope"></span><a title="Acceder a mensajes" href="#">Mensajes</a></li>
-				<li><span class="icon-alarm"></span><a title="Acceder a notificaciones" href="#">Notificaciones</a></li>
-				<li><span class="icon-cancel2"></span></span><a title="salir" href="login.html">Salir</a></li>
-			</ul>
-		</div>
-	</nav>
-	<div class="container rightContent">
-		<div class="topImg">
-			<img title="Imagen de un lago" alt="" src="imagenes/satelite.jpg"/>
-			<div class="nasa">NASA</div>
-		</div>
-		<div class="contentBottom">
-			<div class="menuSuperior">
-				<ul>
-					<li><a href="#" title="Acceder a últimas actualizaciones" >Últimas actualizaciones</a></li>
-					<li><a href="#" title="Acceder a tu actividad reciente" >Tu actividad reciente</a></li>
-					<li><a href="#" title="Acceder a tus colaboradores">Tus colaboradores (3)</a></li>
-					<li><a href="#" title="Acceder a favoritos">Favoritos</a></li>
+	<div class="dashboardPages">
+			<div id="mostrar-nav" class="icon-list-mostrar">
+			</div>
+			<div class="menu">
+				<ul id="dropdown" class="menuLateral">
+					<li class="marcas">Mis marcas<div id="ocultar-nav" class="icon-list-ocultar">
+					</div></li>
+					<li id="open-hideTop" class="topSection">
+						<span class="tituloNasa">NASA</span>
+						<div id="arrowTop" class="arrow1"></div>
+						<ul id="dropdownTop" class="menuTop">
+							<li><span class="icon-files-1"></span><a href="dashboard.html">NASA Graphics Standards</a></li>
+							<li><span class="icon-pictures2"></span><a title="Acceder a ficheros y documentos" href="#">Ficheros y documentos</a></li>
+							<li><span class="icon-pictures2"></span><a title="Acceder a la galería de fotos" href="galeria.html">Galería de fotos</a></li>
+							<li><span class="icon-chart3"></span><a title="Acceder a estadísticas e indicadores" href="#">Estadísticas e indicadores</a></li>
+							<li><span class="icon-brush"></span><a title="Acceder a Design on demand" href="#">Design on demand</a></li>
+							<li class="border alone"><a class="colaboradores" title="Acceder a colaboradores" href="#">Tus colaboradores 3</a><span class="icon-plus1"></span></li>
+							<li class="alone"><a title="Espacio restante" href="#">Espacio restante 560.08 MB</a><div class="progress progress-red"><span style="width: 7%;"></span></div></li>
+							<li class="border"><span class="icon-plus1"></span><a title="Añadir nueva marca" href="#">Añadir nueva marca</a></li>
+							<li class="border"><span class="icon-chart3"></span><a title="Acceder a informes globales" id="abrir" href="#">Informes globales</a>
+							<div id="miModal" class="modal">
+								<div id="flex" class="flex">
+		  							<div id="contenido-modal" class="contenido-modal">
+		  								<div class="modal-body">
+		    								<div class="imgDialog">
+		    									<img src="imagenes/dialog.png" title="Mintta" alt="" />
+		    								</div>
+		    								<div class="contenidoDialog">
+		    									<h2>Informes globales</h2>
+		    									<p>En esta versión de mintta solo hay una marca, no hay disponibles comparativas, métricas e indicadores globales.</p>
+		    									<p class="bold">¿Te gustaría gestionar alguna marca más?</p>
+		    									<p class="bold">Contacta con nosotros y nos cuentas qué necesitas</p>
+		    									<button class="contactar" type="submit" value="contactar">contactar</button>
+		    									<a title="Cerrar ventana modal" class="close" id="close" href="#">Cerrar</a>
+		    								</div>
+		    							</div>
+	  								</div>
+	  							</div>
+	  						</div></li>
+						</ul>
+					</li>
+					<li id="open-hideBottom" class="marginTop">
+						<span class="tituloPerfil">
+							<img class="perfil" src="imagenes/mujer.jpg" title="Imagen de perfil" alt="Imagen de perfil" />
+							Grávita Transformación S.L
+						</span>
+						<div id="arrowBottom" class="arrow2"></div>
+						<ul id="dropdownBottom" class="menuBottom">
+							<li><span class="icon-profile"></span><a title="Acceder a mi perfil" href="#">Mi perfil</a></li>
+							<li><span class="icon-graduate"></span><a title="Acceder a formación" href="#">Formación</a><span class="spanNuevos">Nuevo</span></li>
+							<li><span class="icon-medal1"></span><a title="Acceder a logos y recompensas" href="#">Logos y recompensas</a><span class="spanNuevos">Próximamente</span></li>
+							<li><span class="icon-envelope"></span><a title="Acceder a mensajes" href="#">Mensajes</a></li>
+							<li><span class="icon-alarm"></span><a title="Acceder a notificaciones" href="#">Notificaciones</a></li>
+							<li><span class="icon-cancel2"></span><a title="salir" href="login.html">Salir</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
-			<div class="listBottom">
-				<h2 class="titulo">NASA Graphics Standards</h2>
-				<ul>
-					<li><a title="Nuestra visión">Nuestra visión</a><p>05/10/2018</p><span class="icon-files"></li>
-					<li><a title="Tagline: Accelerating the change. Fast"><span lang="en">Tagline: Accelerating the change. Fast</span></a><p>05/10/2018</p><span class="icon-files"></li>
-					<li><a title="THE BUSINESSTECH CONSULTANCY"><span lang="en">THE BUSINESSTECH CONSULTANCY</span></a><p>08/10/2018</p><span class="icon-files"></li>
-					<li><a title="Valores">Valores</a><p>05/10/2018</p><span class="icon-files"></li>
-				</ul>
+			<div class="container rightContent">
+				<div class="topImg">
+					<img title="Imagen de un lago" alt="" src="imagenes/satelite.jpg"/>
+					<div class="nasa">NASA</div>
+				</div>
+				<div class="contentBottom">
+					<div class="menuSuperior">
+						<ul>
+							<li><a href="#" title="Acceder a últimas actualizaciones" >Últimas actualizaciones</a></li>
+							<li><a href="#" title="Acceder a tu actividad reciente" >Tu actividad reciente</a></li>
+							<li><a href="#" title="Acceder a tus colaboradores">Tus colaboradores (3)</a></li>
+							<li><a href="#" title="Acceder a favoritos">Favoritos</a></li>
+						</ul>
+					</div>
+					<div class="listBottom">
+						<h2 class="titulo">NASA Graphics Standards</h2>
+						<ul>
+							<li><a title="Nuestra visión">Nuestra visión</a><p>05/10/2018</p><span class="icon-files"></span></li>
+							<li><a title="Tagline: Accelerating the change. Fast"><span lang="en">Tagline: Accelerating the change. Fast</span></a><p>05/10/2018</p><span class="icon-files"></span></li>
+							<li><a title="THE BUSINESSTECH CONSULTANCY"><span lang="en">THE BUSINESSTECH CONSULTANCY</span></a><p>08/10/2018</p><span class="icon-files"></span></li>
+							<li><a title="Valores">Valores</a><p>05/10/2018</p><span class="icon-files"></span></li>
+						</ul>
+					</div>
+				</div>
 			</div>
-			</div>
-		</div>
-</div>
-</div>
+	</div>
 </body>
 </html>
 

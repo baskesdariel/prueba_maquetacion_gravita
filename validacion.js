@@ -4,9 +4,10 @@ if(document.getElementById('login').value == 'dariel' && document.getElementById
     window.location.href ='dashboard.html';
     return false;
 } else{
-  document.getElementById('formulario').innerHTML='<div><p>usuario o contraseña incorrectos</p></div><a href="login.html">volver</a>';
+  document.getElementById('formulario').innerHTML='<div class="Error"><p>Usuario o contraseña incorrectos</p><a href="login.html">volver</a></div>';
 
 	}
 }
+
 
 
