@@ -54,7 +54,7 @@ function mantenerShow(){
  document.getElementById("dropdownTop").classList.toggle('show');
 }
 
-function primera() {
+function mantenerDialog() {
  document.getElementById("abrir").addEventListener( 'click' , mantenerShow );
 }
 
