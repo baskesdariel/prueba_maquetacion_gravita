@@ -48,14 +48,15 @@ function changeClassPerfil(){
 
 function desplegardialog(){
  document.getElementById('miModal').style.display = 'block';
- return false;
 }
 
-// function desplegar() {
-//  document.getElementById("miModal").addEventListener( 'click' , desplegardialog );
-// }
+function mantenerShow(){
+ document.getElementById("dropdownTop").classList.toggle('show');
+}
 
-
+function primera() {
+ document.getElementById("abrir").addEventListener( 'click' , mantenerShow );
+}
 
 function desplegar (){
 	document.getElementById("abrir").addEventListener( 'click' , desplegardialog );
@@ -64,11 +65,12 @@ function desplegar (){
 	document.getElementById("open-hideTop").addEventListener( 'click' , changeClassTop );
 	document.getElementById("open-hideTop").addEventListener( 'click' , changeClasstituloNasa );
 	document.getElementById("open-hideBottom").addEventListener( 'click' , changeClassPerfil );
-	document.getElementById("open-hideBottom").addEventListener( 'click' , changeClassBottom );
-	
+	document.getElementById("open-hideBottom").addEventListener( 'click' , changeClassBottom );	
+	document.getElementById("abrir").addEventListener( 'click' , mantenerShow );
 }
 
 window.onload = desplegar;
+
 
 
 
