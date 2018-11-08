@@ -48,6 +48,7 @@ function changeClassPerfil(){
 
 function desplegardialog(){
  document.getElementById('miModal').style.display = 'block';
+ return false;
 }
 
 // function desplegar() {
